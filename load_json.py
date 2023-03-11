@@ -6,7 +6,8 @@ def create_autor(path: str):
     with open(path) as f:
         autors = json.load(f)
     for autor in autors:
-        a = Authors(fullname=autor.get('fullname'), born_date=autor.get('born_date'), born_location=autor.get('born_location'), description=autor.get('description')).save()
+        a = Authors(fullname=autor.get('fullname'), born_date=autor.get('born_date'),
+                    born_location=autor.get('born_location'), description=autor.get('description')).save()
 
 
 def create_quote(path: str):
